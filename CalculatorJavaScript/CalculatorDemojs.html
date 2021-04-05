@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Calculator</title>
+    <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="main-wrapper">
+            <div class="dispaly-wrapper">
+                <input id="display" type="text"  class="display"/>
+            </div>
+            <div class="row">
+                <button onclick="calcInputs('1')">1</button>
+                <button onclick="calcInputs('2')">2</button>
+                <button onclick="calcInputs('3')">3</button>
+                <button onclick="calcInputs('/')">/</button>
+            </div>
+            <div class="row">
+                <button onclick="calcInputs('4')">4</button>
+                <button onclick="calcInputs('5')">5</button>
+                <button onclick="calcInputs('6')">6</button>
+                <button onclick="calcInputs('*')">*</button>
+            </div>
+            <div class="row">
+                <button onclick="calcInputs('7')">7</button>
+                <button onclick="calcInputs('8')">8</button>
+                <button onclick="calcInputs('9')">9</button>
+                <button onclick="calcInputs('-')">-</button>
+            </div>
+            <div class="row">
+                <button onclick="inputClear()">C</button>
+                <button onclick="calcInputs('0')">0</button>
+                <button onclick="calcEqual()">=</button>
+                <button onclick="calcInputs('+')">+</button>
+            </div>
+        </div>
+    </body>
+</html>
+<script>
+    var display = document.getElementById('display')
+    function calcInputs(number)
+    {
+        display.value += number;
+    }
+    function inputClear()
+    {
+       display.value = "";
+    }
+    function calcEqual()
+    {
+       display.value =  eval(display.value);
+    }
+</script>

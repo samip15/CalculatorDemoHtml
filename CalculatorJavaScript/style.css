@@ -1,0 +1,13 @@
+.main-wrapper{
+    width: 400px;
+    margin: 0 auto;
+}
+button{
+    height: 50px;
+    width: 50px;
+}
+.display{
+    height: 30px;
+    width: 204px;
+    font-size: 16px;
+}
